@@ -8,7 +8,7 @@ def main():
     print("Languages to choose from:")
     print("D or N - Dutch/Nederlands")
     print("E - English")
-    print("F or F - French/Français")
+    print("F or F - French/Français") 
     print("Q or ENTER - Quit")
     print()
 
