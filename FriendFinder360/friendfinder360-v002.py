@@ -11,10 +11,10 @@ Version 0.1 Basic Features:
 #DONE create the 5 "fake" users and their answers in python dictionary
 #DONE create the game flow of user entering their information and answering 10 questions, which get written to appropriate dictionary
 #DONE print all the answers along with the usernames
-#TODO create the logic for looping through all fake users' answers and comparing them to current users' answers
-#TODO print results of the answer comparisons to the screen
-#TODO create the 5 "fake" users and their answers in JSON format
+#DONE create the logic for looping through all fake users' answers and comparing them to current users' answers
+#DONE print results of the answer comparisons to the screen
 #TODO read and print the 5 fake users info to terminal from the JSON file
+#TODO after each match comparison update the users and their answers to the JSON file
 
 """
 data structure is a single users_data data dictionary that gets written to and updated from JSON file to and from python dictionary
