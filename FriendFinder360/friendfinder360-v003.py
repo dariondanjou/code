@@ -55,93 +55,100 @@ QUESTIONS = [
     "No Pain, No Gain"
 ]
 
-users_data = {
-    100000000001: {
-        "username": "alicewarren",
-        "First Name": "Alice",
-        "Last Name": "Warren",
-        "answers": {
-            "I tend to make decisions quickly and confidently": 3,
-            "I believe that happiness is something that must be actively pursued and cultivated": 1,
-            "I enjoy exploring new types of food and trying different cuisines": 4,
-            "I find it difficult to remain calm and composed in stressful situations": 1,
-            "It is irresponsible to bring children into today's world": 2,
-            "I often rely on intuition rather than detailed analysis when making decisions": 3,
-            "Personal growth requires constant effort and pushing beyond one's comfort zone": 1,
-            "I'm more interested in maintaining routines than exploring new experiences": 2,
-            "Ethical principles should never be compromised, even at great personal loss": 3,
-            "No Pain, No Gain": 4
-        }
-    },
-    100000000002: {
-        "username": "jerrysmith",
-        "First Name": "Jerry",
-        "Last Name": "Smith",
-        "answers": {
-            "I tend to make decisions quickly and confidently": 4,
-            "I believe that happiness is something that must be actively pursued and cultivated": 1,
-            "I enjoy exploring new types of food and trying different cuisines": 3,
-            "I find it difficult to remain calm and composed in stressful situations": 1,
-            "It is irresponsible to bring children into today's world": 1,
-            "I often rely on intuition rather than detailed analysis when making decisions": 3,
-            "Personal growth requires constant effort and pushing beyond one's comfort zone": 2,
-            "I'm more interested in maintaining routines than exploring new experiences": 2,
-            "Ethical principles should never be compromised, even at great personal loss": 3,
-            "No Pain, No Gain": 3
-        }
-    },
-    100000000003: {
-        "username": "agnesmbekeka",
-        "First Name": "Agnes",
-        "Last Name": "Mbekeka",
-        "answers": {
-            "I tend to make decisions quickly and confidently": 2,
-            "I believe that happiness is something that must be actively pursued and cultivated": 2,
-            "I enjoy exploring new types of food and trying different cuisines": 1,
-            "I find it difficult to remain calm and composed in stressful situations": 1,
-            "It is irresponsible to bring children into today's world": 2,
-            "I often rely on intuition rather than detailed analysis when making decisions": 3,
-            "Personal growth requires constant effort and pushing beyond one's comfort zone": 3,
-            "I'm more interested in maintaining routines than exploring new experiences": 2,
-            "Ethical principles should never be compromised, even at great personal loss": 3,
-            "No Pain, No Gain": 1
-        }
-    },
-    100000000004: {
-        "username": "jamaljackson",
-        "First Name": "Jamal",
-        "Last Name": "Jackson",
-        "answers": {
-            "I tend to make decisions quickly and confidently": 3,
-            "I believe that happiness is something that must be actively pursued and cultivated": 1,
-            "I enjoy exploring new types of food and trying different cuisines": 4,
-            "I find it difficult to remain calm and composed in stressful situations": 1,
-            "It is irresponsible to bring children into today's world": 2,
-            "I often rely on intuition rather than detailed analysis when making decisions": 3,
-            "Personal growth requires constant effort and pushing beyond one's comfort zone": 1,
-            "I'm more interested in maintaining routines than exploring new experiences": 2,
-            "Ethical principles should never be compromised, even at great personal loss": 1,
-            "No Pain, No Gain": 4
-        }
-    },
-    100000000005: {
-        "username": "joechristian",
-        "First Name": "Joe",
-        "Last Name": "Christian",
-        "answers": {
-            "I tend to make decisions quickly and confidently": 2,
-            "I believe that happiness is something that must be actively pursued and cultivated": 1,
-            "I enjoy exploring new types of food and trying different cuisines": 3,
-            "I find it difficult to remain calm and composed in stressful situations": 4,
-            "It is irresponsible to bring children into today's world": 2,
-            "I often rely on intuition rather than detailed analysis when making decisions": 3,
-            "Personal growth requires constant effort and pushing beyond one's comfort zone": 2,
-            "I'm more interested in maintaining routines than exploring new experiences": 1,
-            "Ethical principles should never be compromised, even at great personal loss": 3,
-            "No Pain, No Gain": 4
+USERS_DATA_FILE = 'users_data.json'
+
+# Read users_data from JSON file if it exists
+if os.path.exists(USERS_DATA_FILE):
+    with open(USERS_DATA_FILE, 'r') as file:
+        users_data = json.load(file)
+else:
+    users_data = {
+        100000000001: {
+            "username": "alicewarren",
+            "First Name": "Alice",
+            "Last Name": "Warren",
+            "answers": {
+                "I tend to make decisions quickly and confidently": 3,
+                "I believe that happiness is something that must be actively pursued and cultivated": 1,
+                "I enjoy exploring new types of food and trying different cuisines": 4,
+                "I find it difficult to remain calm and composed in stressful situations": 1,
+                "It is irresponsible to bring children into today's world": 2,
+                "I often rely on intuition rather than detailed analysis when making decisions": 3,
+                "Personal growth requires constant effort and pushing beyond one's comfort zone": 1,
+                "I'm more interested in maintaining routines than exploring new experiences": 2,
+                "Ethical principles should never be compromised, even at great personal loss": 3,
+                "No Pain, No Gain": 4
+            }
+        },
+        100000000002: {
+            "username": "jerrysmith",
+            "First Name": "Jerry",
+            "Last Name": "Smith",
+            "answers": {
+                "I tend to make decisions quickly and confidently": 4,
+                "I believe that happiness is something that must be actively pursued and cultivated": 1,
+                "I enjoy exploring new types of food and trying different cuisines": 3,
+                "I find it difficult to remain calm and composed in stressful situations": 1,
+                "It is irresponsible to bring children into today's world": 1,
+                "I often rely on intuition rather than detailed analysis when making decisions": 3,
+                "Personal growth requires constant effort and pushing beyond one's comfort zone": 2,
+                "I'm more interested in maintaining routines than exploring new experiences": 2,
+                "Ethical principles should never be compromised, even at great personal loss": 3,
+                "No Pain, No Gain": 3
+            }
+        },
+        100000000003: {
+            "username": "agnesmbekeka",
+            "First Name": "Agnes",
+            "Last Name": "Mbekeka",
+            "answers": {
+                "I tend to make decisions quickly and confidently": 2,
+                "I believe that happiness is something that must be actively pursued and cultivated": 2,
+                "I enjoy exploring new types of food and trying different cuisines": 1,
+                "I find it difficult to remain calm and composed in stressful situations": 1,
+                "It is irresponsible to bring children into today's world": 2,
+                "I often rely on intuition rather than detailed analysis when making decisions": 3,
+                "Personal growth requires constant effort and pushing beyond one's comfort zone": 3,
+                "I'm more interested in maintaining routines than exploring new experiences": 2,
+                "Ethical principles should never be compromised, even at great personal loss": 3,
+                "No Pain, No Gain": 1
+            }
+        },
+        100000000004: {
+            "username": "jamaljackson",
+            "First Name": "Jamal",
+            "Last Name": "Jackson",
+            "answers": {
+                "I tend to make decisions quickly and confidently": 3,
+                "I believe that happiness is something that must be actively pursued and cultivated": 1,
+                "I enjoy exploring new types of food and trying different cuisines": 4,
+                "I find it difficult to remain calm and composed in stressful situations": 1,
+                "It is irresponsible to bring children into today's world": 2,
+                "I often rely on intuition rather than detailed analysis when making decisions": 3,
+                "Personal growth requires constant effort and pushing beyond one's comfort zone": 1,
+                "I'm more interested in maintaining routines than exploring new experiences": 2,
+                "Ethical principles should never be compromised, even at great personal loss": 1,
+                "No Pain, No Gain": 4
+            }
+        },
+        100000000005: {
+            "username": "joechristian",
+            "First Name": "Joe",
+            "Last Name": "Christian",
+            "answers": {
+                "I tend to make decisions quickly and confidently": 2,
+                "I believe that happiness is something that must be actively pursued and cultivated": 1,
+                "I enjoy exploring new types of food and trying different cuisines": 3,
+                "I find it difficult to remain calm and composed in stressful situations": 4,
+                "It is irresponsible to bring children into today's world": 2,
+                "I often rely on intuition rather than detailed analysis when making decisions": 3,
+                "Personal growth requires constant effort and pushing beyond one's comfort zone": 2,
+                "I'm more interested in maintaining routines than exploring new experiences": 1,
+                "Ethical principles should never be compromised, even at great personal loss": 3,
+                "No Pain, No Gain": 4
+            }
         }
     }
-}
 
 def calculate_match_percentage(current_user_answers, fake_users_data):
     match_percentages = {}
@@ -193,8 +200,6 @@ def main():
         for question in QUESTIONS:
             print()
             print(question)
-            #answer = int(input(f"{VALID_ANSWER_MESSAGE}: "))
-            #current_user_answers[question] = answer
             while True:
                 try:
                     answer = int(input(f"{VALID_ANSWER_MESSAGE}: "))
@@ -207,7 +212,7 @@ def main():
                     print("Invalid input. Please enter an integer.")
 
         #create new user entry
-        new_user_id = max(users_data.keys()) + 1
+        new_user_id = max(map(int, users_data.keys())) + 1
         users_data[new_user_id] = {
             "username": username,
             "First Name": first_name,
@@ -244,9 +249,12 @@ def main():
         if users_data[user_id]["username"] != username:  #skip the current user
             print(f"{users_data[user_id]['First Name']} {users_data[user_id]['Last Name']}: {match_percentage:.2f}%")
 
+    # Write updated users_data to JSON file
+    with open(USERS_DATA_FILE, 'w') as file:
+        json.dump(users_data, file, indent=4)
+
 if __name__ == '__main__':
     main()
-
 
 
 
