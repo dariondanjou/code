@@ -15,8 +15,8 @@ Version 0.1 Basic Features:
 #DONE print results of the answer comparisons to the screen
 #DONE if username not in the dictionary, tell the user it's been created then prompt for First Name and Last Name, then go to asking questions
 #DONE check if username is already in the users_data dictionary, if so pull up and print First and Last Name with a welcome back messsage
-#TODO read and print the 5 fake users info to terminal from the JSON file
-#TODO after each match comparison update the users and their answers to the JSON file
+#DONE read and print the 5 fake users info to terminal from the JSON file
+#DONE after each match comparison update the users and their answers to the JSON file
     
 
 """
